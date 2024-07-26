@@ -1,0 +1,117 @@
+:root{
+--Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+--margin: 1.5rem;
+--padding: 1.5rem;
+--ff-bold: "Fraunces", serif;
+--ff-para: "Montserrat", sans-serif;
+--fw-700: 700;
+}
+
+p,
+span{
+    color: var(--Dark-grayish-blue);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 500;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--Cream);
+    height: 100%;
+}
+main{
+    margin: 1rem;
+    /* background-color: var(--White); */
+}
+.product{
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--White);
+    display: grid;
+    
+}
+.product__image img{
+    max-width: 100%;
+}
+.product__detail{
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    /* display: grid; */
+    /* align-items: flex-start; */
+}
+.perfume{
+    font-size: 12px;
+    letter-spacing: 4px;
+}
+p{
+    line-height: 1.3;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.product__title{
+    font-size: 2rem;
+    font-family: "Fraunces", serif;
+    font-weight: var(--fw-700);
+    line-height: 1;
+    color: var(--Very-dark-blue);
+}
+.flex-box{
+    display: flex;
+    /* vertical-align: middle; */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.current_price{
+    color: var(--Dark-cyan);
+    font-family: "Fraunces", serif;
+    font-weight: var(--fw-700);
+    font-size: 2.5rem;
+   
+}
+.original_price, .current_price{
+    margin: 0rem 1rem 1rem 0rem;
+}
+svg{
+    margin-right: 3px;
+    vertical-align: middle;
+}
+button{
+    width: 100%;
+    padding: .8rem 5rem .8rem 5rem;
+    margin-bottom: 1rem;
+    font-family: var(--ff-para);
+    font-size: .8rem;
+    font-weight: var(--fw-700);
+    color: var(--White);
+    background-color: var(--Dark-cyan);
+    border: 0;
+    border-radius: .5rem;
+    
+}
+
+@media( min-width: 600px){
+    .product{
+        grid-template-columns: 1fr 1fr;
+        width: 600px;
+        height: 435px;
+        grid-template-rows: 435px;
+        
+    }
+    .product__detail{
+        margin-top: 1.5rem;
+    }
+    main{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+
+}
